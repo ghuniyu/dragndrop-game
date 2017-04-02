@@ -92,7 +92,7 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fonts = Typeface.createFromAsset(getAssets(), "fonts/lilyacriptone-regular.ttf ");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
         tvBack = (TextView) findViewById(R.id.tvBack);
         tvBack.setTypeface(fonts);

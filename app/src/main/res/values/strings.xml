@@ -3,4 +3,39 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string-array
+        name="string_huruf">
+        <item>Alif</item>
+        <item>Ba</item>
+        <item>Ta</item>
+        <item>Tsa</item>
+        <item>Jim</item>
+        <item>Ha</item>
+        <item>Kha</item>
+        <item>Dal</item>
+        <item>Dzal</item>
+        <item>Ra</item>
+        <item>Za</item>
+        <item>Sin</item>
+        <item>Syin</item>
+        <item>Shaad</item>
+        <item>Dhaad</item>
+        <item>Tho</item>
+        <item>Dhlo</item>
+        <item>Ain</item>
+        <item>Ghoin</item>
+        <item>Fa</item>
+        <item>Qaf</item>
+        <item>Kaf</item>
+        <item>Lam</item>
+        <item>Mim</item>
+        <item>Nun</item>
+        <item>Haa</item>
+        <item>Wawu</item>
+        <item>Lam Alif</item>
+        <item>Hamzah</item>
+        <item>Yaa</item>
+    </string-array>
+
 </resources>

@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/ic_alif"
         android:tag="A" />
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/ic_ghoin"
         android:tag="B" />
 
     <ImageView
@@ -35,7 +35,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="148dp"
         android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/ic_dhlo"
         android:tag="C" />
 
     <ImageView
@@ -46,7 +46,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="215dp"
         android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/ic_kaf"
         android:tag="D" />
 
 
@@ -74,10 +74,13 @@
                 android:layout_height="150dp"
                 android:background="@drawable/circle_main" />
 
-            <ImageView
+            <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Alif"
+                android:textSize="30dp"
                 android:src="@mipmap/ic_launcher"/>
 
         </LinearLayout>

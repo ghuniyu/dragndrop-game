@@ -21,7 +21,7 @@ public class DragActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_drag);
+        setContentView(R.layout.activity_game_1);
 
         mRoot = findViewById(R.id.root);
         mTarget = findViewById(R.id.target);
