@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/masjid">
+    android:background="@drawable/masjid"
+    tools:context=".MainMenuActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -35,12 +37,14 @@
         android:gravity="center"
         android:orientation="vertical">
         <LinearLayout
+            android:id="@+id/ll_menu"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/circle_main"
             android:gravity="center">
 
             <TextView
+                android:id="@+id/tv_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pilih Iqra"

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.aulia.belajariqra.Main">
+    tools:context="com.aulia.belajariqra.MenuActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -67,6 +67,7 @@
                 <!--292 433-->
 
                 <LinearLayout
+                    android:id="@+id/ll_iqra1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
