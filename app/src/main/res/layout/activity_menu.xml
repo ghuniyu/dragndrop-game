@@ -22,73 +22,251 @@
         android:layout_height="match_parent"
         android:gravity="center">
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="0dp"
-                android:src="@drawable/ic_cloud_big" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_cloud_big" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="200dp"
-                android:src="@drawable/ic_cloud_very_small" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:src="@drawable/ic_cloud_very_small" />
 
-            <ImageView
-                android:layout_width="700dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_cloud_medium" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="200dp"
+                        android:src="@drawable/ic_cloud_medium" />
 
-            <ImageView
-                android:layout_width="900dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_cloud_small" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_bird_up" />
-
-            <ImageView
-                android:layout_width="1000dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_bird_down" />
-
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_bird_up" />
-
-            <ImageView
-                android:layout_width="500dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_bird_down" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="350dp"
+                        android:src="@drawable/ic_cloud_small" />
 
 
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_big" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/ic_cloud_big" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_very_small" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/ic_cloud_very_small" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_medium" />
+                </FrameLayout>
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginLeft="370dp"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/ic_cloud_medium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="200dp">
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_cloud_big" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:src="@drawable/ic_cloud_very_small" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="200dp"
+                        android:src="@drawable/ic_cloud_medium" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="350dp"
+                        android:src="@drawable/ic_cloud_small" />
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_big" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_very_small" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/ic_cloud_medium" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="230dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="70dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="120dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="300dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="420dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="480dp"
+                        android:src="@drawable/ic_bird_down" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp">
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="230dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="70dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="120dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="300dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="420dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="480dp"
+                        android:src="@drawable/ic_bird_down" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="200dp">
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="230dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="70dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="120dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="300dp"
+                        android:src="@drawable/ic_bird_down" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="420dp"
+                        android:src="@drawable/ic_bird_up" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="480dp"
+                        android:src="@drawable/ic_bird_down" />
+                </FrameLayout>
+            </LinearLayout>
 
         </FrameLayout>
     </LinearLayout>
