@@ -18,9 +18,13 @@ public class MainMenuActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    @OnClick(R.id.action_exit)
+    void exit() {
+        finish();
+    }
+
     @OnClick(R.id.ll_menu)
-    void menu() {
-        new Intent(this, MenuActivity.class)
-                .putExtra("message", "Selamat Bermain Kembali Adik");
+    void openPilih() {
+        startActivity(new Intent(this, PilihActivity.class));
     }
 }
