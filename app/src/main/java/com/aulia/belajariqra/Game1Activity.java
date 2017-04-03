@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class DragActivity extends AppCompatActivity {
+public class Game1Activity extends AppCompatActivity {
     private RelativeLayout.LayoutParams mCurrentLayoutParams;
     private RelativeLayout.LayoutParams mInitialLayoutParams;
     private View mRoot;
@@ -68,9 +68,9 @@ public class DragActivity extends AppCompatActivity {
                         v.setLayoutParams(mInitialLayoutParams);
 
                         if (isTargetContains(mCurrentLayoutParams.leftMargin + v.getWidth() / 2, mCurrentLayoutParams.topMargin + v.getHeight() / 2)) {
-                            Toast.makeText(DragActivity.this, v.getTag().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Game1Activity.this, v.getTag().toString(), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(DragActivity.this, "Jangan Gemeteran Dong", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Game1Activity.this, "Jangan Gemeteran Dong", Toast.LENGTH_SHORT).show();
                         }
 
                         return true;
