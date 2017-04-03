@@ -1,79 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:gravity="center"
-    android:background="@drawable/masjid"
     tools:context=".MainMenuActivity">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/circle_main"
-            android:gravity="center">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pengaturan"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/masjid" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_marginLeft="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_cloud_big" />
+
+        <ImageView
+            android:layout_marginLeft="200dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_cloud_very_small" />
+
+        <ImageView
+            android:layout_width="700dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_cloud_medium" />
+
+        <ImageView
+            android:layout_width="900dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_cloud_small" />
+
+        <ImageView
+            android:layout_width="700dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bird_up"
+            />
+
+        <ImageView
+            android:layout_width="1000dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bird_down"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bird_up"
+            />
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bird_down"
+            />
+
+    </FrameLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/ll_menu"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/circle_main"
-            android:gravity="center">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-            <TextView
-                android:id="@+id/tv_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih Iqra"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/circle_main"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pengaturan"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
         <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/circle_main"
-            android:gravity="center">
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Keluar"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/ll_menu"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/circle_main"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Iqra"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/circle_main"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keluar"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>
