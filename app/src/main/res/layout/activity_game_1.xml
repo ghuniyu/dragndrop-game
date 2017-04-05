@@ -14,6 +14,8 @@
         android:layout_marginTop="12dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_alif"
+        android:padding="5dp"
+        android:background="@drawable/backgroud_circle"
         android:tag="A" />
 
     <ImageView
@@ -24,6 +26,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:contentDescription="@null"
+        android:padding="5dp"
+        android:background="@drawable/backgroud_circle"
         android:src="@drawable/ic_ghoin"
         android:tag="B" />
 
@@ -35,6 +39,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="148dp"
         android:contentDescription="@null"
+        android:padding="5dp"
+        android:background="@drawable/backgroud_circle"
         android:src="@drawable/ic_dhlo"
         android:tag="C" />
 
@@ -47,6 +53,8 @@
         android:layout_marginTop="215dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_kaf"
+        android:padding="5dp"
+        android:background="@drawable/backgroud_circle"
         android:tag="D" />
 
 
@@ -66,7 +74,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hebat"/>
+            </LinearLayout>
 
             <View
                 android:id="@+id/target"
