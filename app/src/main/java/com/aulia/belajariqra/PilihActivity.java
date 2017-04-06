@@ -44,9 +44,9 @@ public class PilihActivity extends AppCompatActivity {
         GameSave gameSave = Hawk.get("Nama Gua", new GameSave());
 
         if (gameSave.learningProgress.size() == 30) {
-            startActivity(new Intent(this, MenuActivity.class));
+            startActivity(new Intent(this, Game1Activity.class));
         } else {
-            Toast.makeText(this, "Belajar Dulu Jancuk", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Adek Harus Belajar Dulu", Toast.LENGTH_SHORT).show();
         }
     }
 }
