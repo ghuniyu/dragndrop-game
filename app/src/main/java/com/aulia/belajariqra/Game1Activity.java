@@ -36,6 +36,9 @@ public class Game1Activity extends AppCompatActivity {
     @BindView(R.id.target)
     View mTarget;
 
+    @BindView(R.id.stage)
+    RelativeLayout stage;
+
     private RelativeLayout.LayoutParams mCurrentLayoutParams;
     private RelativeLayout.LayoutParams mInitialLayoutParams;
 
@@ -51,6 +54,7 @@ public class Game1Activity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
         load();
     }
 

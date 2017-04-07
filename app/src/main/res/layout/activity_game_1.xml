@@ -3,7 +3,17 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/masjid">
+    android:background="@drawable/bg_blue">
+
+    <RelativeLayout
+        android:id="@+id/stage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/masjid" />
 
     <ImageView
         android:id="@+id/a"
@@ -12,10 +22,10 @@
         android:layout_marginEnd="1dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_alif"
-        android:padding="5dp"
         android:background="@drawable/backgroud_circle"
+        android:contentDescription="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_alif"
         android:tag="A" />
 
     <ImageView
@@ -25,9 +35,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
+        android:background="@drawable/backgroud_circle"
         android:contentDescription="@null"
         android:padding="5dp"
-        android:background="@drawable/backgroud_circle"
         android:src="@drawable/ic_ghoin"
         android:tag="B" />
 
@@ -38,9 +48,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="148dp"
+        android:background="@drawable/backgroud_circle"
         android:contentDescription="@null"
         android:padding="5dp"
-        android:background="@drawable/backgroud_circle"
         android:src="@drawable/ic_dhlo"
         android:tag="C" />
 
@@ -51,10 +61,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="215dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_kaf"
-        android:padding="5dp"
         android:background="@drawable/backgroud_circle"
+        android:contentDescription="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_kaf"
         android:tag="D" />
 
 
@@ -74,17 +84,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="50dp">
+
                 <ImageView
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/hebat"/>
+                    android:src="@drawable/hebat"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <View
@@ -95,13 +106,13 @@
 
             <TextView
                 android:id="@+id/question"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
+                android:src="@mipmap/ic_launcher"
                 android:text="Alif"
-                android:textSize="30dp"
-                android:src="@mipmap/ic_launcher"/>
+                android:textSize="30dp" />
 
         </LinearLayout>
 

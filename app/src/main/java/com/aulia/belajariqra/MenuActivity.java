@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.util.Random;
 
@@ -29,6 +30,9 @@ public class MenuActivity extends AppCompatActivity {
     @BindView(R.id.ll_iqra6)
     LinearLayout l6;
 
+    @BindView(R.id.stage)
+    RelativeLayout stage;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,8 @@ public class MenuActivity extends AppCompatActivity {
         animate(l4);
         animate(l5);
         animate(l6);
+
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
     }
 
     void animate(LinearLayout layout) {

@@ -4,14 +4,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.orhanobut.hawk.Hawk;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class PilihActivity extends AppCompatActivity {
+    @BindView(R.id.stage)
+    RelativeLayout stage;
+
+    @BindView(R.id.circle_out1)
+    ImageView c1;
+
+    @BindView(R.id.circle_out2)
+    ImageView c2;
+
+
+    Animation rotate;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +36,13 @@ public class PilihActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pilih);
 
         ButterKnife.bind(this);
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
+
+        rotate = AnimationUtils.loadAnimation(this, R.anim.rotate_ccw);
+
+        c1.setAnimation(rotate);
+        c2.setAnimation(rotate);
+
     }
 
     @OnClick(R.id.tvBack)

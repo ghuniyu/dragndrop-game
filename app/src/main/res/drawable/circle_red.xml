@@ -5,14 +5,14 @@
         <shape android:shape="oval">
             <gradient
                 android:centerColor="#60ffe5a4"
-                android:endColor="@color/red"
+                android:endColor="@color/_red"
                 android:gradientRadius="250"
                 android:startColor="#60ffe5a4"
                 android:type="radial" >
             </gradient>
             <stroke
                 android:width="5dp"
-                android:color="@color/red" />
+                android:color="@color/_red" />
         </shape>
     </item>
 </layer-list>

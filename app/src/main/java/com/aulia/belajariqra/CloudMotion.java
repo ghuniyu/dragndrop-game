@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 
 import java.util.Random;
 
-public class GerakUtils {
+public class CloudMotion {
     public static void init(final RelativeLayout stage, final @DrawableRes int fdr, final @DrawableRes int sdr, final int count) {
         stage.post(new Runnable() {
             @Override

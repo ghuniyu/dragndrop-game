@@ -7,11 +7,13 @@
     <color name="black_overlay">#66000000</color>
     <color name="cloud">#fff</color>
 
-    <color name="green">#0cd40c</color>
-    <color name="red">#e53935</color>
-    <color name="yellow">#ffea00</color>
-    <color name="light_green">#76ff03</color>
-    <color name="purple">#aa00ff</color>
+    <color name="_green">#0cd40c</color>
+    <color name="_red">#e53935</color>
+    <color name="_yellow">#ffea00</color>
+    <color name="_light_green">#76ff03</color>
+    <color name="_purple">#aa00ff</color>
+    <color name="_blue">#1e88e5</color>
+    <color name="_pink">#e040fb</color>
 
     <color name="gray">#8c8c8c</color>
 </resources>

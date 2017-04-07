@@ -68,7 +68,7 @@ public class MainMenuActivity extends AppCompatActivity {
         co2.startAnimation(rotateCCW);
         co3.startAnimation(rotateCCW);
 
-        GerakUtils.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
     }
 
 

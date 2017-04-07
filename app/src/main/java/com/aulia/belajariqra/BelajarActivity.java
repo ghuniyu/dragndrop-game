@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.orhanobut.hawk.Hawk;
@@ -23,6 +24,9 @@ public class BelajarActivity extends AppCompatActivity {
     @BindView(R.id.h2t)
     TextView mH2t;
 
+    @BindView(R.id.stage)
+    RelativeLayout stage;
+
     private int mCurrentPage;
 
     @Override
@@ -33,6 +37,7 @@ public class BelajarActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
         next();
     }
 

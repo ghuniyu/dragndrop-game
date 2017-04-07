@@ -2,27 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context="com.aulia.belajariqra.Main">
+    android:background="@drawable/bg_blue"
+    tools:context="com.aulia.belajariqra.PilihActivity">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
-
-    <TextView
-        android:id="@+id/fullscreen_content"
+    <RelativeLayout
+        android:id="@+id/stage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:layout_height="match_parent" />
 
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -65,8 +52,6 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!--292 433-->
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -77,46 +62,109 @@
                         android:id="@+id/ll_belajar"
                         android:layout_width="135dp"
                         android:layout_height="200dp"
-                        android:background="@drawable/ic_left_book"
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tv_iqra_level"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Belajar IQRA"
-                            android:textSize="20sp"
-                            android:textColor="#000" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:src="@mipmap/ic_launcher"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_left_book" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_iqra_level"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Belajar IQRA"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/circle_out1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_out1" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:src="@drawable/quran" />
+
+                                </FrameLayout>
+                            </LinearLayout>
+                        </FrameLayout>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:id="@+id/ll_bermain"
                         android:layout_width="135dp"
                         android:layout_height="200dp"
-                        android:background="@drawable/ic_right_book"
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bermain"
-                            android:textSize="20sp"
-                            android:textColor="#000" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:src="@mipmap/ic_launcher"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_right_book" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bermain"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/circle_out2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_out2" />
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:src="@drawable/puzle" />
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </FrameLayout>
 
                     </LinearLayout>
-
 
                 </LinearLayout>
 

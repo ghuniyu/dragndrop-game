@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.aulia.belajariqra.BelajarActivity">
+    tools:context="com.aulia.belajariqra.BelajarActivity"
+    android:background="@drawable/bg_blue">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -10,9 +11,10 @@
         android:fitsSystemWindows="true">
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/stage">
 
             <TextView
                 android:id="@+id/action_open_main_menu"
@@ -31,7 +33,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="Kembali" />
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
