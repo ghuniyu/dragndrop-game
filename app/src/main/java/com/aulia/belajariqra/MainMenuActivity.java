@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +34,9 @@ public class MainMenuActivity extends AppCompatActivity {
     ImageView co2;
     @BindView(R.id.circle_out2)
     ImageView co3;
+
+    @BindView(R.id.stage)
+    RelativeLayout stage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,6 +68,7 @@ public class MainMenuActivity extends AppCompatActivity {
         co2.startAnimation(rotateCCW);
         co3.startAnimation(rotateCCW);
 
+        GerakUtils.init(stage, R.drawable.ic_bird_down, 15);
     }
 
 
