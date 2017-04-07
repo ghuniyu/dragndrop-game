@@ -9,13 +9,26 @@ import android.widget.RelativeLayout;
 import java.util.Random;
 
 public class GerakUtils {
-    public static void init(final RelativeLayout stage, final @DrawableRes int drawableRes, final int count) {
+    public static void init(final RelativeLayout stage, final @DrawableRes int fdr, final @DrawableRes int sdr, final int count) {
         stage.post(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < count; i++) {
-                    ImageView object = new ImageView(stage.getContext());
-                    object.setImageResource(drawableRes);
+                    final ImageView object = new ImageView(stage.getContext());
+                    object.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (object.getTag() == null || object.getTag().equals(0)) {
+                                object.setImageResource(fdr);
+                                object.setTag(1);
+                            } else {
+                                object.setImageResource(sdr);
+                                object.setTag(0);
+                            }
+
+                            object.postDelayed(this, random(200, 100));
+                        }
+                    });
 
                     stage.addView(object);
 
@@ -25,21 +38,23 @@ public class GerakUtils {
         });
     }
 
-    private static void move(final ImageView object, final int height, final int width) {
-        Random random = new Random();
+    private static int random(int limit, int offset) {
+        return new Random().nextInt(limit) + offset;
+    }
 
-        boolean isLeft = random.nextInt(2) == 0;
+    private static void move(final ImageView object, final int height, final int width) {
+        boolean isLeft = random(2, 0) == 0;
 
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) object.getLayoutParams();
         params.leftMargin = isLeft ? -1 * 100 : width + 100;
-        params.topMargin = random.nextInt(height - 200) + 100;
+        params.topMargin = random(height - 200, 100);
 
         object.setLayoutParams(params);
         object.setScaleX(isLeft ? 1 : -1);
 
         TranslateAnimation ta = new TranslateAnimation(0, isLeft ? width + 200 : -1 * width - 200, 0, 0);
-        ta.setDuration(random.nextInt(3000) + 3000);
-        ta.setStartOffset(random.nextInt(1000));
+        ta.setDuration(random(3000, 3000));
+        ta.setStartOffset(random(1000, 0));
         ta.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
