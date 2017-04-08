@@ -68,7 +68,8 @@ public class MainMenuActivity extends AppCompatActivity {
         co2.startAnimation(rotateCCW);
         co3.startAnimation(rotateCCW);
 
-        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 10);
+        CloudMotion.init(stage, R.drawable.ic_cloud_very_small, 10);
     }
 
 

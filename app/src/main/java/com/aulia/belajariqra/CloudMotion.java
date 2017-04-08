@@ -9,26 +9,13 @@ import android.widget.RelativeLayout;
 import java.util.Random;
 
 public class CloudMotion {
-    public static void init(final RelativeLayout stage, final @DrawableRes int fdr, final @DrawableRes int sdr, final int count) {
+    public static void init(final RelativeLayout stage, final @DrawableRes int dr, final int count) {
         stage.post(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < count; i++) {
-                    final ImageView object = new ImageView(stage.getContext());
-                    object.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (object.getTag() == null || object.getTag().equals(0)) {
-                                object.setImageResource(fdr);
-                                object.setTag(1);
-                            } else {
-                                object.setImageResource(sdr);
-                                object.setTag(0);
-                            }
-
-                            object.postDelayed(this, random(200, 100));
-                        }
-                    });
+                    ImageView object = new ImageView(stage.getContext());
+                    object.setImageResource(dr);
 
                     stage.addView(object);
 
@@ -46,15 +33,15 @@ public class CloudMotion {
         boolean isLeft = random(2, 0) == 0;
 
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) object.getLayoutParams();
-        params.leftMargin = isLeft ? -1 * 100 : width + 100;
-        params.topMargin = random(height - 200, 100);
+        params.leftMargin = isLeft ? -1 * 200 : width + 200;
+        params.topMargin = random(height / 4, 0);
 
         object.setLayoutParams(params);
         object.setScaleX(isLeft ? 1 : -1);
 
-        TranslateAnimation ta = new TranslateAnimation(0, isLeft ? width + 200 : -1 * width - 200, 0, 0);
-        ta.setDuration(random(3000, 3000));
-        ta.setStartOffset(random(1000, 0));
+        TranslateAnimation ta = new TranslateAnimation(0, isLeft ? width + 400 : -1 * width - 400, 0, 0);
+        ta.setDuration(random(30000, 30000));
+        ta.setStartOffset(random(10000, 0));
         ta.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
