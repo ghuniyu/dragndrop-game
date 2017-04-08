@@ -49,6 +49,10 @@ public class MenuActivity extends AppCompatActivity {
         animate(l6);
 
         BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+        CloudMotion.init(stage, R.drawable.ic_cloud_very_small, 5);
+        CloudMotion.init(stage, R.drawable.ic_cloud_small, 4);
+        CloudMotion.init(stage, R.drawable.ic_cloud_medium, 3);
+        CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
     }
 
     void animate(LinearLayout layout) {
