@@ -54,7 +54,7 @@ public class Game1Activity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 15);
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
         load();
     }
 
