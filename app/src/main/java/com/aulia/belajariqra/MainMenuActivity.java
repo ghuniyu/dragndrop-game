@@ -1,5 +1,6 @@
 package com.aulia.belajariqra;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.aulia.belajariqra.dialog.LoadDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,6 +86,18 @@ public class MainMenuActivity extends AppCompatActivity {
 
     @OnClick(R.id.ll_menu)
     void openPilih() {
-        startActivity(new Intent(this, MenuActivity.class));
+        boolean pilihUser = false;
+
+        if (!pilihUser) {
+            LoadDialog loadDialog = new LoadDialog(this);
+            loadDialog.show();
+            loadDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+
+                }
+            });
+        } else
+            startActivity(new Intent(this, MenuActivity.class));
     }
 }
