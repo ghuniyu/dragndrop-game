@@ -8,8 +8,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.Window;
+import android.widget.Toast;
 
+import com.aulia.belajariqra.GameSave;
 import com.aulia.belajariqra.R;
+import com.orhanobut.hawk.Hawk;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -44,6 +50,11 @@ public class LoadDialog extends Dialog {
         getWindow().setLayout(width, WRAP_CONTENT);
 
         //Pakai adapter untuk munculin semua usernya bang
+        HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
+
+        for (Map.Entry<String, GameSave> entry : mc.entrySet()) {
+            Toast.makeText(context, entry.getKey(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @OnClick(R.id.create)

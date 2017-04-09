@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.orhanobut.hawk.Hawk;
 
+import java.util.HashMap;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -69,7 +71,9 @@ public class PilihActivity extends AppCompatActivity {
 
     @OnClick(R.id.ll_bermain)
     void openMenu() {
-        GameSave gameSave = Hawk.get("Nama Gua", new GameSave());
+        HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
+
+        GameSave gameSave = mc.get("current");
 
         if (gameSave.learningProgress.size() == 30) {
             startActivity(new Intent(this, Game1Activity.class));

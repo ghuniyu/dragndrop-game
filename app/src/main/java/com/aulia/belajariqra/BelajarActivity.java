@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.orhanobut.hawk.Hawk;
 
+import java.util.HashMap;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -84,11 +86,13 @@ public class BelajarActivity extends AppCompatActivity {
         Huruf h1 = Huruf.get(this, 2 * mCurrentPage - 2);
         Huruf h2 = Huruf.get(this, 2 * mCurrentPage - 1);
 
-        GameSave gameSave = Hawk.get("Nama Gua", new GameSave());
+        HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
+
+        GameSave gameSave = mc.get("current");
         gameSave.learningProgress.add(2 * mCurrentPage - 2);
         gameSave.learningProgress.add(2 * mCurrentPage - 1);
 
-        Hawk.put("Nama Gua", gameSave);
+        Hawk.put("Save", mc);
 
         mH1i.setImageResource(h1.image);
         mH1t.setText(h1.text);
