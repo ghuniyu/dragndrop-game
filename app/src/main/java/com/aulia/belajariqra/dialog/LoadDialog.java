@@ -32,7 +32,7 @@ public class LoadDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialog_load);
+        setContentView(R.layout.dialog_create);
         ButterKnife.bind(this);
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -46,9 +46,9 @@ public class LoadDialog extends Dialog {
 
     @OnClick(R.id.create)
     void dialogCreate() {
-        final CreateDialog filterDialog = new CreateDialog(context);
-        filterDialog.show();
-        filterDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+        final CreateDialog dialog = new CreateDialog(context);
+        dialog.show();
+        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialogInterface) {
 
