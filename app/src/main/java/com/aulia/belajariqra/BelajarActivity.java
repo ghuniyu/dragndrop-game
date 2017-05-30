@@ -88,7 +88,7 @@ public class BelajarActivity extends AppCompatActivity {
 
         HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
 
-        GameSave gameSave = mc.get("current");
+        GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
         gameSave.learningProgress.add(2 * mCurrentPage - 2);
         gameSave.learningProgress.add(2 * mCurrentPage - 1);
 

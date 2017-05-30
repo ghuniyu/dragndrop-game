@@ -73,7 +73,7 @@ public class PilihActivity extends AppCompatActivity {
     void openMenu() {
         HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
 
-        GameSave gameSave = mc.get("current");
+        GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
 
         if (gameSave.learningProgress.size() == 30) {
             startActivity(new Intent(this, Game1Activity.class));
