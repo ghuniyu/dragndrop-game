@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class BelajarActivity extends AppCompatActivity {
+public class Belajar1Activity extends AppCompatActivity {
     @BindView(R.id.h1i)
     ImageView mH1i;
     @BindView(R.id.h2i)
@@ -25,6 +26,10 @@ public class BelajarActivity extends AppCompatActivity {
     TextView mH1t;
     @BindView(R.id.h2t)
     TextView mH2t;
+    @BindView(R.id.action_next)
+    ImageView mNextAction;
+    @BindView(R.id.action_previous)
+    ImageView mPreviousAction;
 
     @BindView(R.id.stage)
     RelativeLayout stage;
@@ -35,7 +40,7 @@ public class BelajarActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_belajar);
+        setContentView(R.layout.activity_belajar_1);
 
         ButterKnife.bind(this);
 
@@ -44,6 +49,7 @@ public class BelajarActivity extends AppCompatActivity {
         CloudMotion.init(stage, R.drawable.ic_cloud_small, 4);
         CloudMotion.init(stage, R.drawable.ic_cloud_medium, 3);
         CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
+
         next();
     }
 
@@ -55,10 +61,6 @@ public class BelajarActivity extends AppCompatActivity {
     @OnClick(R.id.action_next)
     void next() {
         mCurrentPage += 1;
-
-        if (mCurrentPage > 15) {
-            mCurrentPage = 1;
-        }
 
         load();
     }
@@ -75,14 +77,21 @@ public class BelajarActivity extends AppCompatActivity {
     void previous() {
         mCurrentPage -= 1;
 
-        if (mCurrentPage < 1) {
-            mCurrentPage = 15;
-        }
-
         load();
     }
 
     private void load() {
+        if (mCurrentPage == 1) {
+            mPreviousAction.setVisibility(View.INVISIBLE);
+        } else if (mCurrentPage == 16) {
+            startActivity(new Intent(this, SelesaiBelajarActivity.class));
+            finish();
+
+            return;
+        } else {
+            mPreviousAction.setVisibility(View.VISIBLE);
+        }
+
         int firstPosition = 2 * mCurrentPage - 2;
         int secondPosition = 2 * mCurrentPage - 1;
 
@@ -98,10 +107,10 @@ public class BelajarActivity extends AppCompatActivity {
         HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
 
         GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
-        gameSave.learningProgress.add(firstPosition);
+        gameSave.learningProgress1.add(firstPosition);
 
         if (secondPosition != 29) {
-            gameSave.learningProgress.add(secondPosition);
+            gameSave.learningProgress1.add(secondPosition);
         }
 
         Hawk.put("Save", mc);

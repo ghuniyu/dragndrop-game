@@ -14,15 +14,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
         android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/score" />
+
         <TextView
+            android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score : "/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="80"/>
+            android:padding="10dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <ImageView
@@ -102,16 +111,12 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="50dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/hebat"
-                    android:visibility="gone" />
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="30dp"
+                android:adjustViewBounds="true" />
 
             <View
                 android:id="@+id/target"

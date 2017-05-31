@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/selamat" />
+
+    <ImageView
+        android:id="@+id/ok_action"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:src="@drawable/tombol_ok" />
+
+</FrameLayout>

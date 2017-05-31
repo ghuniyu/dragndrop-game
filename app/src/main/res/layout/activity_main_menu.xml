@@ -2,12 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_blue">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/masjid" />
+    android:background="@drawable/background_main_menu">
 
     <RelativeLayout
         android:id="@+id/stage"
@@ -24,15 +19,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center">
 
                 <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -42,32 +36,34 @@
                         android:layout_height="fill_parent">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_alpha" />
-
-                        <ImageView
                             android:id="@+id/circle_in"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_in" />
+                            android:src="@drawable/animasi_tombol_main_menu" />
 
-                        <ImageView
-                            android:id="@+id/circle_out"
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/circle_out1" />
+                            android:padding="30dp">
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:gravity="center"
-                            android:text="Pengaturan"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_pengaturan" />
+
+                            <ImageView
+                                android:id="@+id/circle_out"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="20dp"
+                                android:src="@drawable/circle_out2" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:src="@drawable/pengaturan" />
 
                     </FrameLayout>
 
@@ -75,8 +71,8 @@
 
                 <LinearLayout
                     android:id="@+id/ll_menu"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -86,32 +82,34 @@
                         android:layout_height="fill_parent">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_alpha" />
-
-                        <ImageView
                             android:id="@+id/circle_in1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_in" />
+                            android:src="@drawable/animasi_tombol_main_menu" />
 
-                        <ImageView
-                            android:id="@+id/circle_out1"
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/circle_out2" />
+                            android:padding="30dp">
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:gravity="center"
-                            android:text="Pilih Iqra"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_pilih_iqra" />
+
+                            <ImageView
+                                android:id="@+id/circle_out1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="20dp"
+                                android:src="@drawable/circle_out2" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:src="@drawable/pilih_iqra" />
 
                     </FrameLayout>
 
@@ -120,8 +118,8 @@
 
                 <LinearLayout
                     android:id="@+id/action_exit"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -131,37 +129,40 @@
                         android:layout_height="fill_parent">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_alpha" />
-
-                        <ImageView
                             android:id="@+id/circle_in2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:src="@drawable/circle_in" />
+                            android:src="@drawable/animasi_tombol_main_menu" />
 
-                        <ImageView
-                            android:id="@+id/circle_out2"
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/circle_out1" />
+                            android:padding="30dp">
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:gravity="center"
-                            android:text="Keluar"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_keluar" />
+
+                            <ImageView
+                                android:id="@+id/circle_out2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="20dp"
+                                android:src="@drawable/circle_out2" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:src="@drawable/keluar" />
 
                     </FrameLayout>
 
 
                 </LinearLayout>
+
             </LinearLayout>
 
         </FrameLayout>

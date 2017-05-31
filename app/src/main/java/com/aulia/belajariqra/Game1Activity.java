@@ -38,11 +38,16 @@ public class Game1Activity extends AppCompatActivity {
 
     @BindView(R.id.stage)
     RelativeLayout stage;
+    @BindView(R.id.score)
+    TextView mScore;
+    @BindView(R.id.status)
+    ImageView mStatus;
 
     private RelativeLayout.LayoutParams mCurrentLayoutParams;
     private RelativeLayout.LayoutParams mInitialLayoutParams;
 
     private int mCurrentPosition;
+    private int mCurrentScore;
     private int mX;
     private int mY;
 
@@ -81,6 +86,11 @@ public class Game1Activity extends AppCompatActivity {
                     boolean r = (boolean) v.getTag();
 
                     if (r) {
+                        mCurrentScore += 20;
+
+                        mScore.setText(String.valueOf(mCurrentScore));
+                        mStatus.setImageResource(R.drawable.hebat);
+
                         mCurrentPosition++;
 
                         if (mCurrentPosition == 29) {
@@ -91,10 +101,15 @@ public class Game1Activity extends AppCompatActivity {
                             load();
                         }
                     } else {
-                        Toast.makeText(this, "Salah Woy", Toast.LENGTH_SHORT).show();
+                        mStatus.setImageResource(R.drawable.yah_salah);
                     }
-                } else {
-                    Toast.makeText(Game1Activity.this, "Jangan Gemeteran Dong", Toast.LENGTH_SHORT).show();
+
+                    mStatus.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            mStatus.setImageDrawable(null);
+                        }
+                    }, 1000);
                 }
 
                 return true;

@@ -3,11 +3,11 @@ package com.aulia.belajariqra;
 import java.util.HashSet;
 
 public class GameSave {
-    public HashSet<Integer> learningProgress;
+    public HashSet<Integer> learningProgress1;
 
     public int age;
 
     public GameSave() {
-        learningProgress = new HashSet<>();
+        learningProgress1 = new HashSet<>();
     }
 }

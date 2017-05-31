@@ -17,7 +17,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.aulia.belajariqra.GameSave;
-import com.aulia.belajariqra.PilihActivity;
+import com.aulia.belajariqra.MenuActivity;
 import com.aulia.belajariqra.R;
 import com.orhanobut.hawk.Hawk;
 
@@ -112,7 +112,7 @@ public class LoadDialog extends Dialog {
                 public void onClick(View v) {
                     Hawk.put("currentUser", name);
 
-                    getContext().startActivity(new Intent(getContext(), PilihActivity.class));
+                    getContext().startActivity(new Intent(getContext(), MenuActivity.class));
                 }
             });
             holder.mName.setText(mGameSaves.keySet().toArray()[position].toString());

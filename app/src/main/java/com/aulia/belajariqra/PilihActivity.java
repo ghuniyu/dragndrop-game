@@ -58,7 +58,7 @@ public class PilihActivity extends AppCompatActivity {
 
     @OnClick(R.id.ll_belajar)
     void openBelajar() {
-        startActivity(new Intent(this, BelajarActivity.class));
+        startActivity(new Intent(this, Belajar1Activity.class));
     }
 
     @OnClick(R.id.action_open_main_menu)
@@ -75,7 +75,7 @@ public class PilihActivity extends AppCompatActivity {
 
         GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
 
-        if (gameSave.learningProgress.size() == 29) {
+        if (gameSave.learningProgress1.size() == 29) {
             startActivity(new Intent(this, Game1Activity.class));
         } else {
             Toast.makeText(this, "Adek Harus Belajar Dulu", Toast.LENGTH_SHORT).show();

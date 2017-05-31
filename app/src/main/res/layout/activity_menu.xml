@@ -1,21 +1,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_blue"
-    tools:context="com.aulia.belajariqra.MenuActivity">
+    android:background="@drawable/background_main_menu">
 
     <RelativeLayout
-        android:layout_width="match_parent"
         android:id="@+id/stage"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </RelativeLayout>
-    <FrameLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
-
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,6 +36,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="Kembali" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -53,122 +52,68 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!--292 433-->
-
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_satu" />
 
-                    </LinearLayout>
+                </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_dua" />
 
-                    </LinearLayout>
+                </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_tiga" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
+                </FrameLayout>
 
             </LinearLayout>
 
@@ -178,123 +123,73 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_empat" />
 
-                    </LinearLayout>
+                </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_lima" />
 
-                    </LinearLayout>
+                </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="5"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/ll_iqra6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:padding="15dp">
 
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_left_book"
-                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tombol_buku_iqra" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IQRA"
-                            android:textColor="#000"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/iqra_enam" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="@drawable/ic_right_book"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6"
-                            android:textColor="#000"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
+                </FrameLayout>
 
             </LinearLayout>
 
         </LinearLayout>
-    </FrameLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

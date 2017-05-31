@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import java.util.Random;
@@ -18,17 +18,17 @@ import butterknife.OnClick;
 
 public class MenuActivity extends AppCompatActivity {
     @BindView(R.id.ll_iqra1)
-    LinearLayout l1;
+    FrameLayout l1;
     @BindView(R.id.ll_iqra2)
-    LinearLayout l2;
+    FrameLayout l2;
     @BindView(R.id.ll_iqra3)
-    LinearLayout l3;
+    FrameLayout l3;
     @BindView(R.id.ll_iqra4)
-    LinearLayout l4;
+    FrameLayout l4;
     @BindView(R.id.ll_iqra5)
-    LinearLayout l5;
+    FrameLayout l5;
     @BindView(R.id.ll_iqra6)
-    LinearLayout l6;
+    FrameLayout l6;
 
     @BindView(R.id.stage)
     RelativeLayout stage;
@@ -55,7 +55,7 @@ public class MenuActivity extends AppCompatActivity {
         CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
     }
 
-    void animate(LinearLayout layout) {
+    void animate(FrameLayout layout) {
         Random r = new Random();
         int ran = r.nextInt(2) + 2;
 
