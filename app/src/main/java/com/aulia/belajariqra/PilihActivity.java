@@ -75,7 +75,7 @@ public class PilihActivity extends AppCompatActivity {
 
         GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
 
-        if (gameSave.learningProgress.size() == 30) {
+        if (gameSave.learningProgress.size() == 29) {
             startActivity(new Intent(this, Game1Activity.class));
         } else {
             Toast.makeText(this, "Adek Harus Belajar Dulu", Toast.LENGTH_SHORT).show();

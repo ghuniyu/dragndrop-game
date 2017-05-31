@@ -83,7 +83,7 @@ public class Game1Activity extends AppCompatActivity {
                     if (r) {
                         mCurrentPosition++;
 
-                        if (mCurrentPosition == 30) {
+                        if (mCurrentPosition == 29) {
                             Toast.makeText(this, "Selamat Kamu Keren", Toast.LENGTH_SHORT).show();
 
                             finish();
@@ -138,7 +138,7 @@ public class Game1Activity extends AppCompatActivity {
 
         List<Integer> options = new ArrayList<>();
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 29; i++) {
             if (i != mCurrentPosition) {
                 options.add(i);
             }

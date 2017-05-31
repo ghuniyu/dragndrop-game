@@ -83,14 +83,26 @@ public class BelajarActivity extends AppCompatActivity {
     }
 
     private void load() {
-        Huruf h1 = Huruf.get(this, 2 * mCurrentPage - 2);
-        Huruf h2 = Huruf.get(this, 2 * mCurrentPage - 1);
+        int firstPosition = 2 * mCurrentPage - 2;
+        int secondPosition = 2 * mCurrentPage - 1;
+
+        Huruf h1 = Huruf.get(this, firstPosition);
+        Huruf h2;
+
+        if (secondPosition == 29) {
+            h2 = new Huruf();
+        } else {
+            h2 = Huruf.get(this, secondPosition);
+        }
 
         HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
 
         GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
-        gameSave.learningProgress.add(2 * mCurrentPage - 2);
-        gameSave.learningProgress.add(2 * mCurrentPage - 1);
+        gameSave.learningProgress.add(firstPosition);
+
+        if (secondPosition != 29) {
+            gameSave.learningProgress.add(secondPosition);
+        }
 
         Hawk.put("Save", mc);
 
