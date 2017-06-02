@@ -45,6 +45,12 @@
         <activity
             android:name=".Pilih2Activity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pilih3Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Game3Activity"
+            android:screenOrientation="landscape" />
 
     </application>
 

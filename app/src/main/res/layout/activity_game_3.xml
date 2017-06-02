@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mode_3">
+
+    <ImageView
+        android:id="@+id/a"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/alif" />
+
+    <ImageView
+        android:id="@+id/b"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/alif" />
+
+    <ImageView
+        android:id="@+id/c"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/alif" />
+
+    <ImageView
+        android:id="@+id/d"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/alif" />
+
+    <ImageView
+        android:id="@+id/option_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="475dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/fat_hah"
+        android:tag="A" />
+
+    <ImageView
+        android:id="@+id/option_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="475dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/kasrah"
+        android:tag="I" />
+
+    <ImageView
+        android:id="@+id/option_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="475dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/dhummah"
+        android:tag="U" />
+
+    <ImageView
+        android:id="@+id/answer_option"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="80dp" />
+
+    <ImageView
+        android:id="@+id/answer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="120dp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center_horizontal"
+        android:text="Placeholder"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true" />
+
+</RelativeLayout>
