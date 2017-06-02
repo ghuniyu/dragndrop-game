@@ -19,6 +19,9 @@
             android:name=".Game1Activity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".Game2Activity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".MainMenuActivity"
             android:screenOrientation="landscape" />
         <activity
@@ -37,7 +40,10 @@
             android:name=".MenuActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".PilihActivity"
+            android:name=".Pilih1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pilih2Activity"
             android:screenOrientation="landscape" />
 
     </application>

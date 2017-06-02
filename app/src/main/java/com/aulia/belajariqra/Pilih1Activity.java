@@ -18,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class PilihActivity extends AppCompatActivity {
+public class Pilih1Activity extends AppCompatActivity {
     @BindView(R.id.stage)
     RelativeLayout stage;
 
@@ -35,7 +35,7 @@ public class PilihActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_pilih);
+        setContentView(R.layout.activity_pilih_1);
 
         ButterKnife.bind(this);
         BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);

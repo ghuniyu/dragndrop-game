@@ -79,7 +79,12 @@ public class MenuActivity extends AppCompatActivity {
 
     @OnClick(R.id.ll_iqra1)
     void openGame1() {
-        startActivity(new Intent(this, PilihActivity.class));
+        startActivity(new Intent(this, Pilih1Activity.class));
+    }
+
+    @OnClick(R.id.ll_iqra2)
+    void openGame2() {
+        startActivity(new Intent(this, Pilih2Activity.class));
     }
 
     @OnClick(R.id.action_open_main_menu)
