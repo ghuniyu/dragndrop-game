@@ -53,6 +53,7 @@ public class Pilih2Activity extends AppCompatActivity {
 
     @OnClick(R.id.ll_belajar)
     void openBelajar() {
+        startActivity(new Intent(this, Belajar2Activity.class));
     }
 
     @OnClick(R.id.action_open_main_menu)

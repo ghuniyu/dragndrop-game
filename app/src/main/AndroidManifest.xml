@@ -28,6 +28,12 @@
             android:name=".SelesaiBelajarActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".Belajar2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Belajar3Activity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".SplashScreenActivity"
             android:screenOrientation="landscape">
             <intent-filter>
