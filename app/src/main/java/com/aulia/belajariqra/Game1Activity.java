@@ -51,6 +51,8 @@ public class Game1Activity extends AppCompatActivity {
     private int mX;
     private int mY;
 
+    private List<Integer> mQuestions;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,15 @@ public class Game1Activity extends AppCompatActivity {
         CloudMotion.init(stage, R.drawable.ic_cloud_small, 4);
         CloudMotion.init(stage, R.drawable.ic_cloud_medium, 3);
         CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
+
+        mQuestions = new ArrayList<>();
+
+        for (int i = 0; i < 29; i++) {
+            mQuestions.add(i);
+        }
+
+        Collections.shuffle(mQuestions);
+
         load();
     }
 
@@ -147,14 +158,14 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     private void load() {
-        Huruf huruf = Huruf.get(this, mCurrentPosition);
+        Huruf huruf = Huruf.get(this, mQuestions.get(mCurrentPosition));
 
         mQuestion.setText(huruf.text);
 
         List<Integer> options = new ArrayList<>();
 
-        for (int i = 0; i < 29; i++) {
-            if (i != mCurrentPosition) {
+        for (int i = 0; i < mQuestions.size(); i++) {
+            if (i != mQuestions.get(mCurrentPosition)) {
                 options.add(i);
             }
         }
@@ -162,19 +173,19 @@ public class Game1Activity extends AppCompatActivity {
         Collections.shuffle(options);
 
         options = options.subList(0, 3);
-        options.add(mCurrentPosition);
+        options.add(mQuestions.get(mCurrentPosition));
 
         Collections.shuffle(options);
 
         mA.setImageResource(Huruf.get(this, options.get(0)).image);
-        mA.setTag(options.get(0) == mCurrentPosition);
+        mA.setTag(mQuestions.get(mCurrentPosition).equals(options.get(0)));
         mB.setImageResource(Huruf.get(this, options.get(1)).image);
-        mB.setTag(options.get(1) == mCurrentPosition);
+        mB.setTag(mQuestions.get(mCurrentPosition).equals(options.get(1)));
         mC.setImageResource(Huruf.get(this, options.get(2)).image);
-        mC.setTag(options.get(2) == mCurrentPosition);
+        mC.setTag(mQuestions.get(mCurrentPosition).equals(options.get(2)));
         mD.setImageResource(Huruf.get(this, options.get(3)).image);
-        mD.setTag(options.get(3) == mCurrentPosition);
+        mD.setTag(mQuestions.get(mCurrentPosition).equals(options.get(3)));
 
-        Log.e("Cheat Q" + mCurrentPosition, Arrays.deepToString(options.toArray()));
+        Log.e("Cheat Q" + mQuestions.get(mCurrentPosition), Arrays.deepToString(options.toArray()));
     }
 }
