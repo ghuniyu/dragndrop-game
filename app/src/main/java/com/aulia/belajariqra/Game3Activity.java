@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,6 +42,10 @@ public class Game3Activity extends AppCompatActivity {
     @BindView(R.id.question)
     TextView mQuestion;
 
+    @BindView(R.id.stage)
+    RelativeLayout mStage;
+    @BindView(R.id.score)
+    TextView mScore;
     @BindView(R.id.root)
     View mRoot;
 
@@ -47,6 +53,10 @@ public class Game3Activity extends AppCompatActivity {
     ImageView mStatus;
 
     private final Object[][] mQuestions = new Object[][]{
+            {"Bu", 1, "U"},
+            {"Bu", 1, "U"},
+            {"Bu", 1, "U"},
+            {"Bu", 1, "U"},
             {"Bu", 1, "U"}
     };
 
@@ -54,6 +64,7 @@ public class Game3Activity extends AppCompatActivity {
     private RelativeLayout.LayoutParams mInitialLayoutParams;
 
     private int mCurrentQuestion;
+    private int mCurrentScore;
     private int mX;
     private int mY;
 
@@ -64,6 +75,17 @@ public class Game3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_game_3);
 
         ButterKnife.bind(this);
+
+        Tutorial.show(this, 2);
+
+        BirdMotion.init(mStage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+
+        CloudMotion.init(mStage, R.drawable.ic_cloud_very_small, 5);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_small, 4);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_medium, 3);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_big, 2);
+
+        shuffleQuestions();
 
         load();
     }
@@ -82,6 +104,10 @@ public class Game3Activity extends AppCompatActivity {
 
             case MotionEvent.ACTION_UP:
                 v.setLayoutParams(mInitialLayoutParams);
+
+                if (mCurrentQuestion == mQuestions.length) {
+                    return true;
+                }
 
                 if (isTargetContains(mAnswer, mCurrentLayoutParams.leftMargin + v.getWidth() / 2, mCurrentLayoutParams.topMargin + v.getHeight() / 2)) {
                     mAnswer.setImageResource(Huruf.get(this, (int) v.getTag()).image);
@@ -119,6 +145,10 @@ public class Game3Activity extends AppCompatActivity {
 
             case MotionEvent.ACTION_UP:
                 v.setLayoutParams(mInitialLayoutParams);
+
+                if (mCurrentQuestion == mQuestions.length) {
+                    return true;
+                }
 
                 if (isTargetContains(mAnswerOption, mCurrentLayoutParams.leftMargin + v.getWidth() / 2, mCurrentLayoutParams.topMargin + v.getHeight() / 2)) {
                     mAnswerOption.setImageDrawable(((ImageView) v).getDrawable());
@@ -165,6 +195,10 @@ public class Game3Activity extends AppCompatActivity {
         if (mAnswer.getTag() != null && mAnswerOption.getTag() != null) {
             if (mAnswer.getTag().equals(mQuestions[mCurrentQuestion][1]) && mAnswerOption.getTag().equals(mQuestions[mCurrentQuestion][2])) {
                 mStatus.setImageResource(R.drawable.hebat);
+
+                mCurrentScore += 20;
+
+                mScore.setText(String.valueOf(mCurrentScore));
             } else {
                 mStatus.setImageResource(R.drawable.yah_salah);
             }
@@ -175,6 +209,14 @@ public class Game3Activity extends AppCompatActivity {
                     mStatus.setImageDrawable(null);
                 }
             }, 1000);
+
+            mCurrentQuestion++;
+
+            if (mCurrentQuestion < mQuestions.length) {
+                load();
+            } else {
+                Toast.makeText(this, "Selesai", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -204,5 +246,23 @@ public class Game3Activity extends AppCompatActivity {
         mC.setTag(options.get(2));
         mD.setImageResource(Huruf.get(this, options.get(3)).image);
         mD.setTag(options.get(3));
+
+        mAnswer.setImageDrawable(null);
+        mAnswer.setTag(null);
+        mAnswerOption.setImageDrawable(null);
+        mAnswerOption.setTag(null);
+    }
+
+    private void shuffleQuestions() {
+        Random random = new Random();
+
+        for (int i = 0; i < mQuestions.length; i++) {
+            int r = random.nextInt(mQuestions.length);
+
+            Object[] t = mQuestions[i];
+
+            mQuestions[i] = mQuestions[r];
+            mQuestions[r] = t;
+        }
     }
 }

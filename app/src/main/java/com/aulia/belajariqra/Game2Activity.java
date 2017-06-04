@@ -7,10 +7,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,6 +38,10 @@ public class Game2Activity extends AppCompatActivity {
     @BindView(R.id.question)
     ImageView mQuestion;
 
+    @BindView(R.id.stage)
+    RelativeLayout mStage;
+    @BindView(R.id.score)
+    TextView mScore;
     @BindView(R.id.root)
     View mRoot;
 
@@ -42,6 +49,10 @@ public class Game2Activity extends AppCompatActivity {
     ImageView mStatus;
 
     private final int[][] mQuestions = new int[][]{
+            {R.drawable.i_2_5, 6, 12},
+            {R.drawable.i_2_5, 6, 12},
+            {R.drawable.i_2_5, 6, 12},
+            {R.drawable.i_2_5, 6, 12},
             {R.drawable.i_2_5, 6, 12}
     };
 
@@ -49,6 +60,7 @@ public class Game2Activity extends AppCompatActivity {
     private RelativeLayout.LayoutParams mInitialLayoutParams;
 
     private int mCurrentQuestion;
+    private int mCurrentScore;
     private int mX;
     private int mY;
 
@@ -59,6 +71,17 @@ public class Game2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_game_2);
 
         ButterKnife.bind(this);
+
+        Tutorial.show(this, 1);
+
+        BirdMotion.init(mStage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+
+        CloudMotion.init(mStage, R.drawable.ic_cloud_very_small, 5);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_small, 4);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_medium, 3);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_big, 2);
+
+        shuffleQuestions();
 
         load();
     }
@@ -78,6 +101,10 @@ public class Game2Activity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 v.setLayoutParams(mInitialLayoutParams);
 
+                if (mCurrentQuestion == mQuestions.length) {
+                    return true;
+                }
+
                 if (isTargetContains(mAnswer1, mCurrentLayoutParams.leftMargin + v.getWidth() / 2, mCurrentLayoutParams.topMargin + v.getHeight() / 2)) {
                     mAnswer1.setImageResource((int) v.getTag());
                     mAnswer1.setTag(v.getTag());
@@ -94,6 +121,10 @@ public class Game2Activity extends AppCompatActivity {
 
                     if (mAnswer1.getTag().equals(h1.image) && mAnswer2.getTag().equals(h2.image)) {
                         mStatus.setImageResource(R.drawable.hebat);
+
+                        mCurrentScore += 20;
+
+                        mScore.setText(String.valueOf(mCurrentScore));
                     } else {
                         mStatus.setImageResource(R.drawable.yah_salah);
                     }
@@ -104,6 +135,14 @@ public class Game2Activity extends AppCompatActivity {
                             mStatus.setImageDrawable(null);
                         }
                     }, 1000);
+
+                    mCurrentQuestion++;
+
+                    if (mCurrentQuestion < mQuestions.length) {
+                        load();
+                    } else {
+                        Toast.makeText(this, "Selesai", Toast.LENGTH_LONG).show();
+                    }
                 }
 
                 return true;
@@ -169,5 +208,23 @@ public class Game2Activity extends AppCompatActivity {
         mD.setTag(Huruf.get(this, options.get(3)).image);
         mE.setImageResource(Huruf.get(this, options.get(4)).image);
         mE.setTag(Huruf.get(this, options.get(4)).image);
+
+        mAnswer1.setImageDrawable(null);
+        mAnswer1.setTag(null);
+        mAnswer2.setImageDrawable(null);
+        mAnswer2.setTag(null);
+    }
+
+    private void shuffleQuestions() {
+        Random random = new Random();
+
+        for (int i = 0; i < mQuestions.length; i++) {
+            int r = random.nextInt(mQuestions.length);
+
+            int[] t = mQuestions[i];
+
+            mQuestions[i] = mQuestions[r];
+            mQuestions[r] = t;
+        }
     }
 }

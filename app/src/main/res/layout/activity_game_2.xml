@@ -6,6 +6,35 @@
     android:background="@drawable/mode_2">
 
     <RelativeLayout
+        android:id="@+id/stage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/score" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -49,44 +78,66 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/a"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/alif" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-70dp">
 
-    <ImageView
-        android:id="@+id/b"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/alif" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pohon_kelapa" />
 
-    <ImageView
-        android:id="@+id/c"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/alif" />
+        <ImageView
+            android:id="@+id/a"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ba" />
 
-    <ImageView
-        android:id="@+id/d"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/alif" />
+        <ImageView
+            android:id="@+id/b"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/a"
+            android:layout_alignTop="@id/a"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ba" />
 
-    <ImageView
-        android:id="@+id/e"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/alif" />
+        <ImageView
+            android:id="@+id/c"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/a"
+            android:layout_alignTop="@id/a"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ba" />
+
+        <ImageView
+            android:id="@+id/d"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/b"
+            android:layout_alignTop="@id/b"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ba" />
+
+        <ImageView
+            android:id="@+id/e"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/c"
+            android:layout_alignTop="@id/c"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ba" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
