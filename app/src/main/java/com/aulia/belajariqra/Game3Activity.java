@@ -53,11 +53,11 @@ public class Game3Activity extends AppCompatActivity {
     ImageView mStatus;
 
     private final Object[][] mQuestions = new Object[][]{
-            {"Bu", 1, "U"},
-            {"Bu", 1, "U"},
-            {"Bu", 1, "U"},
-            {"Bu", 1, "U"},
-            {"Bu", 1, "U"}
+            {"Ba", 1, "A"},
+            {"Du", 7, "U"},
+            {"Di", 19, "I"},
+            {"Nu", 24, "U"},
+            {"Ri", 9, "I"}
     };
 
     private RelativeLayout.LayoutParams mCurrentLayoutParams;
