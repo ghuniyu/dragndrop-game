@@ -63,7 +63,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:src="@drawable/pengaturan" />
+                            android:src="@drawable/u2" />
 
                     </FrameLayout>
 
@@ -109,7 +109,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:src="@drawable/pilih_iqra" />
+                            android:src="@drawable/u" />
 
                     </FrameLayout>
 
@@ -156,7 +156,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-                            android:src="@drawable/keluar" />
+                            android:src="@drawable/u1" />
 
                     </FrameLayout>
 
