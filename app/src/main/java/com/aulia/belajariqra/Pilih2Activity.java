@@ -53,6 +53,8 @@ public class Pilih2Activity extends AppCompatActivity {
 
     @OnClick(R.id.ll_belajar)
     void openBelajar() {
+        Sound.click(this);
+
         startActivity(new Intent(this, Belajar2Activity.class));
     }
 
@@ -66,6 +68,8 @@ public class Pilih2Activity extends AppCompatActivity {
 
     @OnClick(R.id.ll_bermain)
     void openMenu() {
+        Sound.click(this);
+
         startActivity(new Intent(this, Game2Activity.class));
     }
 }

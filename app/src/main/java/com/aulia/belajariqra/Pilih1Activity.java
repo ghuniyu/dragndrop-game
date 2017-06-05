@@ -58,6 +58,8 @@ public class Pilih1Activity extends AppCompatActivity {
 
     @OnClick(R.id.ll_belajar)
     void openBelajar() {
+        Sound.click(this);
+
         startActivity(new Intent(this, Belajar1Activity.class));
     }
 
@@ -71,6 +73,8 @@ public class Pilih1Activity extends AppCompatActivity {
 
     @OnClick(R.id.ll_bermain)
     void openMenu() {
+        Sound.click(this);
+
         HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
 
         GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));

@@ -77,6 +77,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
     @OnClick(R.id.ll_menu)
     void openPilih() {
+        Sound.click(this);
+
         LoadDialog loadDialog = new LoadDialog(this);
         loadDialog.show();
     }
