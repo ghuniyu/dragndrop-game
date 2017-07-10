@@ -3,17 +3,21 @@ package com.aulia.belajariqra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.orhanobut.hawk.Hawk;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Pilih2Activity extends AppCompatActivity {
+public class Pilih2Activity extends BaseActivity {
     @BindView(R.id.stage)
     RelativeLayout stage;
 
@@ -70,6 +74,14 @@ public class Pilih2Activity extends AppCompatActivity {
     void openMenu() {
         Sound.click(this);
 
-        startActivity(new Intent(this, Game2Activity.class));
+        HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
+
+        GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
+
+        if (gameSave.learningProgress2.size() == 12) {
+            startActivity(new Intent(this, Game2Activity.class));
+        } else {
+            Toast.makeText(this, "Adek Harus Belajar Dulu", Toast.LENGTH_SHORT).show();
+        }
     }
 }

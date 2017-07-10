@@ -32,4 +32,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     compile 'com.orhanobut:hawk:2.0.1'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 }

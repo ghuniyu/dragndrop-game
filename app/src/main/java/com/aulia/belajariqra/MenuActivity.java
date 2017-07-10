@@ -3,7 +3,6 @@ package com.aulia.belajariqra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
@@ -16,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends BaseActivity {
     @BindView(R.id.ll_iqra1)
     FrameLayout l1;
     @BindView(R.id.ll_iqra2)

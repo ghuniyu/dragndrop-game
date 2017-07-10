@@ -2,7 +2,6 @@ package com.aulia.belajariqra;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
 
-public class Game2Activity extends AppCompatActivity {
+public class Game2Activity extends BaseActivity {
     @BindView(R.id.a)
     ImageView mA;
     @BindView(R.id.b)
@@ -45,6 +44,8 @@ public class Game2Activity extends AppCompatActivity {
     @BindView(R.id.root)
     View mRoot;
 
+    @BindView(R.id.reference)
+    ImageView mReference;
     @BindView(R.id.status)
     ImageView mStatus;
 
@@ -74,16 +75,52 @@ public class Game2Activity extends AppCompatActivity {
 
         Tutorial.show(this, 1);
 
-        BirdMotion.init(mStage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+        BirdMotion.init(mStage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 4);
 
-        CloudMotion.init(mStage, R.drawable.ic_cloud_very_small, 5);
-        CloudMotion.init(mStage, R.drawable.ic_cloud_small, 4);
-        CloudMotion.init(mStage, R.drawable.ic_cloud_medium, 3);
-        CloudMotion.init(mStage, R.drawable.ic_cloud_big, 2);
+        CloudMotion.init(mStage, R.drawable.ic_cloud_very_small, 8);
 
         shuffleQuestions();
 
         load();
+
+        mReference.post(new Runnable() {
+            @Override
+            public void run() {
+                double ratio = mReference.getWidth() / 945;
+
+                RelativeLayout.LayoutParams params;
+
+                params = (RelativeLayout.LayoutParams) mA.getLayoutParams();
+                params.leftMargin = (int) (453 * ratio - mA.getWidth() / 4);
+                params.topMargin = (int) (168 * ratio - mA.getHeight() / 4);
+
+                mA.setLayoutParams(params);
+
+                params = (RelativeLayout.LayoutParams) mB.getLayoutParams();
+                params.leftMargin = (int) (334 * ratio - mB.getWidth() / 4);
+                params.topMargin = (int) (223 * ratio - mB.getHeight() / 4);
+
+                mB.setLayoutParams(params);
+
+                params = (RelativeLayout.LayoutParams) mC.getLayoutParams();
+                params.leftMargin = (int) (599 * ratio - mC.getWidth() / 4);
+                params.topMargin = (int) (237 * ratio - mC.getHeight() / 4);
+
+                mC.setLayoutParams(params);
+
+                params = (RelativeLayout.LayoutParams) mD.getLayoutParams();
+                params.leftMargin = (int) (386 * ratio - mD.getWidth() / 4);
+                params.topMargin = (int) (378 * ratio - mD.getHeight() / 4);
+
+                mD.setLayoutParams(params);
+
+                params = (RelativeLayout.LayoutParams) mE.getLayoutParams();
+                params.leftMargin = (int) (555 * ratio - mE.getWidth() / 4);
+                params.topMargin = (int) (376 * ratio - mE.getHeight() / 4);
+
+                mE.setLayoutParams(params);
+            }
+        });
     }
 
     @OnTouch(value = {R.id.a, R.id.b, R.id.c, R.id.d, R.id.e})

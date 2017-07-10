@@ -97,7 +97,10 @@
                                         android:layout_width="110dp"
                                         android:layout_height="110dp"
                                         android:layout_marginTop="20dp"
-                                        android:padding="20dp">
+                                        android:paddingBottom="16dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingStart="32dp"
+                                        android:paddingTop="16dp">
 
                                         <ImageView
                                             android:id="@+id/circle_out1"
@@ -145,7 +148,10 @@
                                         android:layout_width="110dp"
                                         android:layout_height="110dp"
                                         android:layout_marginTop="20dp"
-                                        android:padding="20dp">
+                                        android:paddingBottom="16dp"
+                                        android:paddingEnd="32dp"
+                                        android:paddingStart="0dp"
+                                        android:paddingTop="16dp">
 
                                         <ImageView
                                             android:id="@+id/circle_out2"

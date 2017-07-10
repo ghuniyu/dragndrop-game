@@ -3,15 +3,19 @@ package com.aulia.belajariqra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import com.orhanobut.hawk.Hawk;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Belajar2Activity extends AppCompatActivity {
+public class Belajar2Activity extends BaseActivity {
     private final int[] mImages = {
             R.drawable.pertama,
             R.drawable.kedua,
@@ -35,6 +39,8 @@ public class Belajar2Activity extends AppCompatActivity {
     ImageView mActionPrevious;
     @BindView(R.id.image)
     ImageView mImage;
+    @BindView(R.id.stage)
+    RelativeLayout stage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +49,12 @@ public class Belajar2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_belajar_2);
 
         ButterKnife.bind(this);
+
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
+        CloudMotion.init(stage, R.drawable.ic_cloud_very_small, 5);
+        CloudMotion.init(stage, R.drawable.ic_cloud_small, 4);
+        CloudMotion.init(stage, R.drawable.ic_cloud_medium, 3);
+        CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
 
         load();
     }
@@ -75,5 +87,12 @@ public class Belajar2Activity extends AppCompatActivity {
         }
 
         mImage.setImageResource(mImages[mCurrentPage]);
+
+        HashMap<String, GameSave> mc = Hawk.get("Save", new HashMap<String, GameSave>());
+
+        GameSave gameSave = mc.get(Hawk.<String>get("currentUser"));
+        gameSave.learningProgress2.add(mCurrentPage);
+
+        Hawk.put("Save", mc);
     }
 }

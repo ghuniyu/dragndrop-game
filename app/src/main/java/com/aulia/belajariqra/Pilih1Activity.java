@@ -3,7 +3,6 @@ package com.aulia.belajariqra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -18,7 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Pilih1Activity extends AppCompatActivity {
+public class Pilih1Activity extends BaseActivity {
     @BindView(R.id.stage)
     RelativeLayout stage;
 

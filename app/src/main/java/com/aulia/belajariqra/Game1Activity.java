@@ -2,7 +2,6 @@ package com.aulia.belajariqra;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
 
-public class Game1Activity extends AppCompatActivity {
+public class Game1Activity extends BaseActivity {
     @BindView(R.id.a)
     ImageView mA;
     @BindView(R.id.b)
@@ -63,11 +62,9 @@ public class Game1Activity extends AppCompatActivity {
 
         Tutorial.show(this, 0);
 
-        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 7);
-        CloudMotion.init(stage, R.drawable.ic_cloud_very_small, 5);
-        CloudMotion.init(stage, R.drawable.ic_cloud_small, 4);
-        CloudMotion.init(stage, R.drawable.ic_cloud_medium, 3);
-        CloudMotion.init(stage, R.drawable.ic_cloud_big, 2);
+        BirdMotion.init(stage, R.drawable.ic_bird_down, R.drawable.ic_bird_up, 4);
+
+        CloudMotion.init(stage, R.drawable.ic_cloud_very_small, 8);
 
         mQuestions = new ArrayList<>();
 

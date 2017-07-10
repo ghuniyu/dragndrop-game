@@ -3,7 +3,6 @@ package com.aulia.belajariqra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -17,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Belajar1Activity extends AppCompatActivity {
+public class Belajar1Activity extends BaseActivity {
     @BindView(R.id.h1i)
     ImageView mH1i;
     @BindView(R.id.h2i)
