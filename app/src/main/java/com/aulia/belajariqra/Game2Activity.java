@@ -86,6 +86,12 @@ public class Game2Activity extends BaseActivity {
         mReference.post(new Runnable() {
             @Override
             public void run() {
+                if (mReference.getWidth() == 0) {
+                    mReference.post(this);
+
+                    return;
+                }
+
                 double ratio = mReference.getWidth() / 945;
 
                 RelativeLayout.LayoutParams params;
